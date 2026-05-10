@@ -1,0 +1,16 @@
+Sitemap: https://seemanchalclinic.in/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Optimize for healthcare discovery
+User-agent: Googlebot
+Allow: /
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Speed up indexing
+Crawl-delay: 1
