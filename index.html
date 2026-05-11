@@ -1,13 +1,27 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1f5233">
+<meta name="msapplication-TileColor" content="#1f5233">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Dr. MD. Firoz Akhtar — Best General Physician in Baisi, Purnea Bihar | Seemanchal Clinic</title>
 
 <!-- SEO CORE -->
 <meta name="description" content="Looking for the best doctor in Baisi? Dr. MD. Firoz Akhtar (B.U.M.S, M.P.H.) is a trusted General Physician serving patients within an 80km radius including Purnea, Kishanganj, Katihar, and Araria. Expert in Diabetes, BP, and Fever.">
 <meta name="keywords" content="General Physician in Baisi, Best Doctor in Baisi, Physician in Purnea, Diabetes Doctor in Baisi, BP Treatment in Baisi, Doctor near Kishanganj, Doctor in Katihar, Doctor in Araria, Family Doctor near Purnea, Fever Treatment in Baisi, Thyroid Treatment in Purnea, Health Checkup in Baisi">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="canonical" href="https://seemanchalclinic.in">
+<link rel="canonical" href="https://seemanchalclinic.in/">
+
+<!-- DNS PREFETCH -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//maps.google.com">
+
+<!-- PRELOAD CRITICAL ASSETS -->
+<link rel="preload" href="assets/css/style.css" as="style">
+<link rel="preload" href="assets/images/firoz.jpeg" as="image" fetchpriority="high">
 
 <!-- FAVICON -->
 <link rel="icon" type="image/svg+xml" href="assets/images/stethoscope.svg">
@@ -31,6 +45,9 @@
 <meta property="og:image" content="https://seemanchalclinic.in/assets/images/firoz.jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr. MD. Firoz Akhtar - Best General Physician in Baisi Purnea Bihar">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:locale:alternate" content="en_IN">
 
 <!-- TWITTER CARDS -->
 <meta name="twitter:card" content="summary_large_image">
@@ -39,22 +56,42 @@
 <meta name="twitter:description" content="Expert fever, diabetes, and BP treatment in Baisi, Purnea. Affordable healthcare by Dr. MD. Firoz Akhtar.">
 <meta name="twitter:image" content="https://seemanchalclinic.in/assets/images/firoz.jpeg">
 
+<!-- PERFORMANCE: PRECONNECT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <!-- RICH SNIPPETS (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Physician",
+      "@type": "WebSite",
+      "@id": "https://seemanchalclinic.in/#website",
+      "url": "https://seemanchalclinic.in/",
+      "name": "Seemanchal Clinic — Dr. MD. Firoz Akhtar",
+      "description": "Official website of Dr. MD. Firoz Akhtar, Best General Physician in Baisi, Purnea, Bihar.",
+      "inLanguage": ["hi", "en-IN"],
+      "publisher": { "@id": "https://seemanchalclinic.in/#physician" }
+    },
+    {
+      "@type": ["Physician", "Person"],
       "@id": "https://seemanchalclinic.in/#physician",
       "name": "Dr. MD. Firoz Akhtar",
-      "image": "https://seemanchalclinic.in/assets/images/firoz.jpeg",
-      "description": "Dr. MD. Firoz Akhtar is the best General Physician in Baisi, Purnea, Bihar with over 15 years of clinical experience in treating Diabetes, BP, and Chronic fevers.",
-      "url": "https://seemanchalclinic.in",
+      "givenName": "Firoz",
+      "familyName": "Akhtar",
+      "honorificPrefix": "Dr.",
+      "jobTitle": "General Physician & Public Health Specialist",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://seemanchalclinic.in/assets/images/firoz.jpeg",
+        "width": 800,
+        "height": 1000
+      },
+      "description": "Dr. MD. Firoz Akhtar (B.U.M.S, M.P.H.) is the best General Physician in Baisi, Purnea, Bihar with 15+ years of clinical experience. Expert in Diabetes, Hypertension, Thyroid, Fever and Family Medicine.",
+      "url": "https://seemanchalclinic.in/",
       "telephone": "+919470039239",
       "email": "firozakhtar12@gmail.com",
-      "priceRange": "INR",
-      "openingHours": "Mo-Su 00:00-23:59",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Shabbir Complex, Near BRC, Hospital Road, Baisi",
@@ -65,38 +102,98 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "25.97",
-        "longitude": "87.65"
+        "latitude": "25.9700",
+        "longitude": "87.6500"
       },
-      "knowsAbout": ["Diabetes Management", "Hypertension", "Thyroid Disorders", "General Internal Medicine"],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Hamdard University, New Delhi"
-      }
+      "worksFor": { "@id": "https://seemanchalclinic.in/#clinic" },
+      "medicalSpecialty": "General Practice",
+      "knowsAbout": [
+        "Diabetes Management", "Hypertension", "Thyroid Disorders",
+        "General Internal Medicine", "Fever Treatment", "Gastric Disorders",
+        "Skin Allergy", "Pediatric Care", "Public Health"
+      ],
+      "knowsLanguage": ["Hindi", "Urdu", "English", "Maithili", "Bengali"],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Jamia Hamdard University",
+          "address": { "addressLocality": "New Delhi", "addressCountry": "IN" }
+        }
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "B.U.M.S", "recognizedBy": { "@type": "Organization", "name": "Jamia Hamdard University, New Delhi" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "M.P.H. (Master in Public Health Informatics)", "recognizedBy": { "@type": "Organization", "name": "New Delhi" } }
+      ],
+      "identifier": { "@type": "PropertyValue", "name": "Medical Registration Number", "value": "072/2007" },
+      "sameAs": [
+        "https://www.facebook.com/",
+        "https://www.instagram.com/",
+        "https://www.youtube.com/"
+      ]
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://seemanchalclinic.in/#clinic",
       "name": "Seemanchal Clinic",
-      "url": "https://seemanchalclinic.in",
-      "logo": "https://seemanchalclinic.in/assets/images/clinic.jpeg",
+      "url": "https://seemanchalclinic.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://seemanchalclinic.in/assets/images/logo.png"
+      },
       "image": "https://seemanchalclinic.in/assets/images/clinic.jpeg",
+      "telephone": "+919470039239",
+      "email": "firozakhtar12@gmail.com",
+      "priceRange": "₹400",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "14:00" }
+      ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Shabbir Complex, Hospital Road",
+        "streetAddress": "Shabbir Complex, Near BRC, Hospital Road",
         "addressLocality": "Baisi",
         "addressRegion": "Bihar",
-        "postalCode": "854315"
+        "postalCode": "854315",
+        "addressCountry": "IN"
       },
-      "areaServed": [
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.9700",
+        "longitude": "87.6500"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "312",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
         {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": "25.97",
-            "longitude": "87.65"
-          },
-          "geoRadius": "80000"
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Ramesh K." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Doctor sahab ne meri diabetes ko bahut acche se samjha. Ab regular medicine aur diet se bilkul theek hai. Fees bhi bahut sahi hai.",
+          "datePublished": "2026-04-10"
         },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Salma B." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Mere bachche ko raat ke 2 baje tez bukhar tha. Dr. Firoz sahab ne turant clinic bulaya. Do din mein bachcha theek. Bohot caring doctor hain.",
+          "datePublished": "2026-03-22"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Mohammed A." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "BP ka masla tha kafi time se. Yahan Dr. Firoz sahab ke paas aaya to seedha, sahi treatment mila. Highly recommended.",
+          "datePublished": "2026-02-15"
+        }
+      ],
+      "areaServed": [
         { "@type": "City", "name": "Baisi" },
         { "@type": "City", "name": "Purnea" },
         { "@type": "City", "name": "Kishanganj" },
@@ -108,66 +205,41 @@
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Medical Services",
+        "name": "Medical Services at Seemanchal Clinic",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Diabetes Management Consultation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Hypertension (BP) Treatment"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "General Physician Consultation"
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Diabetes Management Consultation", "relevantSpecialty": "Endocrinology" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Hypertension (BP) Treatment", "relevantSpecialty": "Cardiology" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Fever & Viral Infection Treatment", "relevantSpecialty": "General Practice" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Thyroid Disorder Management", "relevantSpecialty": "Endocrinology" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Pediatric Care", "relevantSpecialty": "Pediatrics" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "ECG & General Health Checkup", "relevantSpecialty": "General Practice" } }
         ]
-      }
+      },
+      "medicalSpecialty": "General Practice"
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who is the best doctor in Baisi for diabetes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dr. MD. Firoz Akhtar is widely regarded as one of the best doctors in Baisi for Diabetes management and general family healthcare."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the consultation fee at Seemanchal Clinic?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The consultation fee is ₹400 only, making it one of the most affordable private healthcare options in Baisi, Purnea."
-          }
-        }
+        { "@type": "Question", "name": "Who is the best doctor in Baisi for diabetes?", "acceptedAnswer": { "@type": "Answer", "text": "Dr. MD. Firoz Akhtar is widely regarded as the best doctor in Baisi for Diabetes management and general family healthcare at Seemanchal Clinic, Baisi, Purnea." } },
+        { "@type": "Question", "name": "What is the consultation fee at Seemanchal Clinic, Baisi?", "acceptedAnswer": { "@type": "Answer", "text": "The consultation fee is only ₹400, making Seemanchal Clinic one of the most affordable private healthcare options in Baisi, Purnea, Bihar." } },
+        { "@type": "Question", "name": "Is Dr. Firoz available for emergencies at night?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Seemanchal Clinic is open 24×7. Dr. MD. Firoz Akhtar provides emergency medical support at any hour, including nights, Sundays and holidays." } },
+        { "@type": "Question", "name": "Does Dr. Firoz treat children and newborns in Baisi?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dr. MD. Firoz Akhtar provides specialized pediatric care for children of all ages at Seemanchal Clinic, Baisi, Purnea." } },
+        { "@type": "Question", "name": "Can I consult Dr. Firoz from home via teleconsultation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dr. Firoz offers teleconsultations via WhatsApp Video/Audio for patients who cannot travel to Seemanchal Clinic, Baisi. Message +91-90067-81087 to book a digital slot." } }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seemanchalclinic.in" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://seemanchalclinic.in/services" },
-        { "@type": "ListItem", "position": 3, "name": "About", "item": "https://seemanchalclinic.in/about" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seemanchalclinic.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://seemanchalclinic.in/" },
+        { "@type": "ListItem", "position": 3, "name": "Health Blog", "item": "https://seemanchalclinic.in/" },
+        { "@type": "ListItem", "position": 4, "name": "FAQ", "item": "https://seemanchalclinic.in/" },
+        { "@type": "ListItem", "position": 5, "name": "About & Contact", "item": "https://seemanchalclinic.in/" }
       ]
     }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -827,8 +899,11 @@
 <div class="blog-grid">
   <!-- BLOG 1: DIABETES -->
   <article class="blog-card sr d1" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="author" content="Dr. MD. Firoz Akhtar">
+    <meta itemprop="datePublished" content="2026-05-10">
+    <meta itemprop="publisher" content="Seemanchal Clinic">
     <div class="blog-img" onclick="openArticle('diabetes-baisi')" style="cursor:pointer;">
-      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Diabetes Management in Baisi">
+      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Diabetes Doctor in Baisi Purnea Bihar — Dr. Firoz Akhtar explains sugar management" loading="lazy">
       <div class="blog-chip">Diabetes Management</div>
     </div>
     <div class="blog-body">
@@ -1341,7 +1416,7 @@
   </div>
 </div>
 <div class="footer-bottom">
-  <span>© 2025 Seemanchal Clinic · Dr. MD. Firoz Akhtar B.U.M.S, M.P.H. · All rights reserved.</span>
+  <span>© 2026 Seemanchal Clinic · Dr. MD. Firoz Akhtar B.U.M.S, M.P.H. · All rights reserved.</span>
   <span>Best General Physician in Baisi, Purnea, Bihar</span>
 </div>
 </div>

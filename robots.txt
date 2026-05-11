@@ -5,12 +5,16 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-# Optimize for healthcare discovery
 User-agent: Googlebot
 Allow: /
 Allow: /assets/images/
 Allow: /assets/css/
 Allow: /assets/js/
 
-# Speed up indexing
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: AdsBot-Google
+Allow: /
+
 Crawl-delay: 1
