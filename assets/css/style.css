@@ -2212,3 +2212,273 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .nav-logo-img img{height:110px !important;}
 }
 
+/* ═══════════════════════════════════════════════════
+   PREMIUM MOBILE OVERHAUL — CLASSY PHYSICIAN EDITION
+   Reduces content density, adds breathing room,
+   and elevates the premium feel on every mobile screen.
+═══════════════════════════════════════════════════ */
+
+/* ── GLOBAL MOBILE SPACING REFINEMENT ── */
+@media(max-width: 768px) {
+
+  /* Core section spacing — breathe, not overflow */
+  .sec { padding: 64px 0; }
+  .sec-sm { padding: 48px 0; }
+  .pt { padding-top: 90px; }
+  #page-home .pt { padding-top: 70px; }
+
+  /* ── HERO: Clean, editorial, premium ── */
+  .hero { min-height: auto; padding: 0; }
+  .hero-main {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  .hero-text { max-width: 100%; }
+  .hero-name {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-statement {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    color: var(--muted);
+  }
+  .hero-spec { justify-content: center; font-size: 0.65rem; }
+  .hero-spec::before { display: none; }
+  .clinic-status { font-size: 0.6rem; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.88rem;
+  }
+  .cta-subtext { justify-content: center; font-size: 0.65rem; text-align: center; flex-wrap: wrap; }
+  .hero-visual { width: 100%; justify-content: center; }
+  .hero-img-wrap { max-width: 280px; margin: 0 auto; }
+  .hero-portrait { aspect-ratio: 3/4; border-radius: 20px; }
+  .verified-badge { font-size: 0.6rem; padding: 0.4rem 0.75rem; }
+
+  /* ── TRUST GRID: 2×2 compact ── */
+  .hero-trust-grid {
+    gap: 0;
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid rgba(7,22,13,0.08);
+  }
+  .ht-item {
+    padding: 1rem;
+    text-align: center;
+    flex: unset;
+  }
+  .ht-item:not(:last-child)::after { display: none; }
+  .ht-item strong { font-size: 1.35rem; }
+  .ht-item span { font-size: 0.58rem; }
+  /* Subtle inner borders instead of separators */
+  .ht-item:nth-child(1) { border-right: 1px solid rgba(7,22,13,0.07); border-bottom: 1px solid rgba(7,22,13,0.07); }
+  .ht-item:nth-child(2) { border-bottom: 1px solid rgba(7,22,13,0.07); }
+  .ht-item:nth-child(3) { border-right: 1px solid rgba(7,22,13,0.07); }
+
+  /* ── CREDENTIAL STRIP: Horizontal scroll on mobile ── */
+  .cred-strip { padding: 1.75rem 0; overflow: hidden; }
+  .cred-strip-inner {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: flex-start;
+  }
+  .cred-strip-inner::-webkit-scrollbar { display: none; }
+  .cred-chip {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    gap: 0.75rem;
+    white-space: nowrap;
+    padding: 0.6rem 1rem;
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: 100px;
+    box-shadow: var(--sh-xs);
+  }
+  .cred-chip .aura-ico { width: 32px; height: 32px; border-radius: 10px; }
+  .cred-chip .aura-ico svg { width: 15px; height: 15px; }
+
+  /* ── MARQUEE: Slightly slower ── */
+  .mq-track { animation-duration: 40s; }
+  .mq-i { font-size: 0.65rem; }
+
+  /* ── ABOUT SECTION ── */
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-img-col { display: none; } /* Remove image on mobile — text tells the story */
+  .about-grid > div:last-child { padding-top: 0; }
+  .cred-cards { gap: 6px; margin-top: 1.25rem; }
+  .cred-card { padding: 0.65rem 0.85rem; }
+  .cred-card-txt { font-size: 0.78rem; }
+
+  /* ── SERVICES ACCORDION ── */
+  .svc-split-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .svc-left { position: static; }
+  .svc-left .h2 { font-size: 1.7rem; }
+  .svc-acc-trigger { padding: 1.4rem 0; }
+  .svc-acc-title { font-size: 1rem; }
+  .svc-acc-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .svc-acc-inner { padding-bottom: 1.75rem; }
+  .svc-acc-inner p { font-size: 0.88rem; margin-bottom: 1.25rem; }
+
+  /* ── TRUST LEDGER ── */
+  .trust-ledger { padding: 56px 0; }
+  .tl-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .tl-left { border-right: none; padding-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 2rem; text-align: center; }
+  .tl-count { font-size: 5rem; }
+  .tl-note { padding-left: 0; }
+  .tl-note::before { display: none; }
+  .tl-quote { font-size: 1.2rem; line-height: 1.55; }
+  .tl-reasons { gap: 1.25rem; }
+  .tl-reason { flex: 1 1 100%; }
+
+  /* ── QUOTE SECTION: Minimal ── */
+  .quote-sec { padding: 56px 0; }
+  .q-mark { font-size: 4rem; }
+  .q-text { font-size: 1.3rem; line-height: 1.5; }
+  .q-text .hindi { font-size: 0.75rem; margin-top: 1rem; }
+  .q-by { flex-direction: column; gap: 4px; font-size: 0.62rem; }
+  .q-by::before, .q-by::after { width: 20px; }
+
+  /* ── EMERGENCY SECTION ── */
+  .emrg { padding: 48px 0; }
+  .emrg-inner { flex-direction: column; text-align: center; gap: 2rem; }
+  .emrg-text h2 { font-size: 1.55rem; }
+  .emrg-text p { font-size: 0.85rem; margin: 0 auto; }
+  .emrg-btns { flex-direction: column; width: 100%; gap: 0.65rem; }
+  .emrg-btns .btn { width: 100%; justify-content: center; padding: 0.85rem 1.5rem; }
+
+  /* ── TESTIMONIALS: Single column, clean ── */
+  .testi-premium-sec { padding: 56px 0; }
+  .testi-p-header { margin-bottom: 2.5rem; }
+  .testi-p-header .h2 { font-size: 1.8rem; }
+  .testi-p-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .testi-p-card { padding: 1.5rem; border-radius: 18px; }
+  .testi-p-card.featured { margin-top: 0; } /* Remove negative margin on mobile */
+  .testi-p-text { font-size: 0.88rem; line-height: 1.75; }
+  .testi-p-stars { font-size: 0.85rem; }
+  .testi-p-name { font-size: 0.88rem; }
+  .testi-p-meta { font-size: 0.72rem; }
+  .testi-p-footer { flex-direction: column; text-align: center; gap: 0.5rem; }
+
+  /* ── FAQ PREVIEW ── */
+  .faq-prev-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .faq-prev-card { padding: 1.1rem 1.25rem; }
+  .faq-q { font-size: 0.85rem; }
+  .faq-a { font-size: 0.8rem; }
+
+  /* ── FAQ PAGE ── */
+  .faq-modern-wrap { flex-direction: column; gap: 2.5rem; }
+  .faq-m-left { position: static; }
+  .faq-m-header .h2 { font-size: 1.8rem; }
+  .faq-m-trigger { padding: 1.25rem 1rem; gap: 0.75rem; }
+  .faq-m-title { font-size: 0.92rem; line-height: 1.45; }
+  .faq-m-inner { padding: 0 1rem 1.25rem; font-size: 0.9rem; }
+
+  /* ── CTA SECTION ── */
+  .cta-sec { padding: 56px 0; }
+  .cta-inner { flex-direction: column; text-align: center; gap: 2rem; }
+  .cta-text h2 { font-size: 1.6rem; }
+  .cta-text p { font-size: 0.85rem; }
+  .cta-acts { flex-direction: column; width: 100%; gap: 0.65rem; }
+  .cta-acts .btn { width: 100%; justify-content: center; }
+
+  /* ── APPOINTMENT PAGE ── */
+  .appt-layout { grid-template-columns: 1fr; min-height: auto; }
+  .appt-left { padding: 3rem 1.25rem; }
+  .appt-left h1 { font-size: 1.75rem; }
+  .appt-left p { font-size: 0.85rem; margin-bottom: 2rem; }
+  .appt-right { padding: 2rem 1.25rem 4rem; }
+  .appt-card { padding: 1.75rem 1.25rem; border-radius: 20px; }
+  .appt-card h2 { font-size: 1.4rem; }
+  .appt-dets { gap: 0.65rem; }
+  .appt-det-val { font-size: 0.82rem; }
+
+  /* ── CONTACT PAGE ── */
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .profile-col { position: static; display: none; } /* Hide tall portrait on mobile */
+  .contact-info-card { padding: 1.1rem; }
+
+  /* ── SERVICES EXPLORER ── */
+  .svc-explorer { flex-direction: column; }
+  .svc-visuals { flex: none; width: 100%; height: 40vw; min-height: 200px; max-height: 300px; position: relative; }
+  .svc-visual-img { padding: 0.75rem; }
+  .svc-content-scroll { flex: none; width: 100%; padding: 2.5rem 1.25rem 4rem; }
+  .svc-block { margin-bottom: 4rem; }
+  .svc-num { font-size: 4rem; }
+  .svc-header .h2 { font-size: 1.65rem; }
+  .svc-detail-card { padding: 1.25rem; border-radius: 16px; }
+  .svc-detail-card p { font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .svc-features-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  /* ── PAGE HERO HEADERS ── */
+  .ph { padding: 3.5rem 0 2.5rem; }
+  .ph h1 { font-size: 1.9rem; }
+  .ph p { font-size: 0.85rem; }
+
+  /* ── BLOG ── */
+  .blog-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* ── FOOTER ── */
+  footer { padding: 3rem 0 2rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
+  .footer-grid > div:first-child { grid-column: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 0.35rem; font-size: 0.65rem; }
+
+  /* ── SOCIAL GRID ── */
+  .social-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .social-card { padding: 1.25rem; }
+  .s-name { font-size: 0.88rem; }
+  .s-desc { font-size: 0.74rem; }
+
+  /* ── STICKY CALL BAR ── */
+  .mob-call-sticky { display: flex; padding: 0.5rem 0.75rem; gap: 0.5rem; }
+  .mob-call-sticky a { font-size: 0.8rem; padding: 0.65rem 0.5rem; border-radius: var(--r8); }
+  body { padding-bottom: 60px; }
+
+  /* ── WA FAB: hide on mobile ── */
+  .wa-fab { display: none !important; }
+
+  /* ── TYPOGRAPHY SCALE ── */
+  .h2 { font-size: 1.75rem; }
+  .h3 { font-size: 1.35rem; }
+  .lead { font-size: 0.95rem; line-height: 1.75; }
+  .body { font-size: 0.88rem; line-height: 1.78; }
+  .label { font-size: 0.6rem; letter-spacing: 0.14em; margin-bottom: 0.6rem; }
+
+  /* ── PREMIUM BREATHING ROOM FINE-TUNE ── */
+  .wrap, .wrap-md, .wrap-sm { padding: 0 1.25rem; }
+  .rule { margin: 1rem 0; }
+}
+
+/* ── EXTRA SMALL (≤ 400px) ── */
+@media(max-width: 400px) {
+  .hero-name { font-size: 1.7rem; }
+  .hero-img-wrap { max-width: 230px; }
+  .tl-count { font-size: 4rem; }
+  .q-text { font-size: 1.15rem; }
+  .appt-card { padding: 1.25rem 1rem; }
+  .nav-logo-img img { height: 90px !important; }
+}
