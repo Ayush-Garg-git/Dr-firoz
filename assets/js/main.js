@@ -15,7 +15,24 @@ function go(name){
 }
 
 /* ── MOBILE MENU ── */
-function toggleMob(){document.getElementById('mobNav').classList.toggle('open');}
+function toggleMob(){
+  const nav = document.getElementById('mobNav');
+  const overlay = document.getElementById('mobOverlay');
+  const ham = document.querySelector('.ham');
+  const isOpen = nav.classList.contains('open');
+  
+  if(isOpen){
+    nav.classList.remove('open');
+    overlay.classList.remove('open');
+    if(ham) ham.classList.remove('active');
+    document.body.style.overflow = '';
+  } else {
+    nav.classList.add('open');
+    overlay.classList.add('open');
+    if(ham) ham.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
 
 /* ── NAV SCROLL ── */
 window.addEventListener('scroll',()=>{
@@ -136,7 +153,7 @@ const ARTICLES = {
     cat: "Endocrine Health",
     date: "May 10, 2026",
     read: "5 min read",
-    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=80",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80",
     content: `
       <p>Diabetes is no longer a disease of the city; it is spreading rapidly in Baisi, Amour, and throughout the Seemanchal region. As a <strong>Diabetes doctor in Baisi</strong>, I have seen thousands of patients struggle with high blood sugar because they lack a simple, clear plan.</p>
       
@@ -173,7 +190,7 @@ const ARTICLES = {
     cat: "Hypertension Care",
     date: "May 08, 2026",
     read: "4 min read",
-    img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1600&q=80",
+    img: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=1600&q=80",
     content: `
       <p>High Blood Pressure is often called the 'Silent Killer' because it has no obvious symptoms until it causes a heart attack or stroke. Getting effective <strong>BP treatment in Purnea</strong> or Baisi is the most important step for long-term health.</p>
       
@@ -203,7 +220,7 @@ const ARTICLES = {
     cat: "Metabolic Health",
     date: "May 05, 2026",
     read: "6 min read",
-    img: "https://images.unsplash.com/photo-1631563019676-dade0dbf6b54?w=1600&q=80",
+    img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=1600&q=80",
     content: `
       <p>Thyroid problems are becoming very common in women across the Seemanchal area. If you are looking for <strong>Thyroid care in Purnea</strong>, understanding your symptoms is the first step.</p>
       
@@ -222,7 +239,7 @@ const ARTICLES = {
     cat: "Digestive Health",
     date: "May 03, 2026",
     read: "4 min read",
-    img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80",
+    img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80",
     content: `
       <p>Poor gut health affects your energy, immunity, and even your mood. In rural Bihar, digestive issues are common due to water quality and dietary habits. Learn how to maintain a healthy stomach naturally.</p>
       
@@ -246,7 +263,7 @@ const ARTICLES = {
     cat: "Unani Medicine",
     date: "May 01, 2026",
     read: "5 min read",
-    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80",
+    img: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1600&q=80",
     content: `
       <p>As a B.U.M.S practitioner, I believe in the power of nature. However, it is vital to know which herbal remedies are backed by evidence and when you must consult a modern doctor for serious conditions.</p>
       
@@ -265,7 +282,7 @@ const ARTICLES = {
     cat: "Preventive Health",
     date: "May 06, 2026",
     read: "5 min read",
-    img: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1600&q=80",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1600&q=80",
     content: `
       <p>Diabetes, BP, and obesity are no longer just 'city diseases.' They are spreading rapidly in rural Bihar too. The good news is that they are largely preventable through simple daily choices.</p>
       

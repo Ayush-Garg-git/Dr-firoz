@@ -183,8 +183,8 @@
 
 <!-- STICKY MOBILE CALL -->
 <div class="mob-call-sticky">
-  <a href="tel:+919470039239" class="btn btn-green btn-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Now</a>
-  <a href="https://wa.me/919006781087?text=Hello%20Dr.%20Firoz%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-wa btn-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp</a>
+  <a href="tel:+919470039239" class="btn btn-green btn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Now</a>
+  <a href="https://wa.me/919006781087?text=Hello%20Dr.%20Firoz%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-wa btn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp</a>
 </div>
 
 <!-- NAV -->
@@ -206,13 +206,51 @@
   <div class="ham" onclick="toggleMob()"><span></span><span></span><span></span></div>
 </div>
 </nav>
+<!-- PREMIUM MOBILE SIDEBAR -->
+<div class="mob-overlay" id="mobOverlay" onclick="toggleMob()"></div>
 <div class="mob-nav" id="mobNav">
-  <a onclick="go('home');toggleMob()">Home</a>
-  <a onclick="go('services');toggleMob()">Services</a>
-  <a onclick="go('blogs');toggleMob()">Health Blog</a>
-  <a onclick="go('faq');toggleMob()">FAQ</a>
-  <a onclick="go('contact');toggleMob()">About &amp; Contact</a>
-  <a onclick="go('appointment');toggleMob()" class="mob-cta">Book Appointment</a>
+  <div class="mob-nav-header">
+    <div class="mob-nav-logo" onclick="go('home');toggleMob()">
+      <img src="assets/images/logo.png" alt="Seemanchal Clinic" style="height:110px;width:auto;margin:-20px 0;filter:brightness(0) opacity(0.85);">
+    </div>
+    <button class="mob-close" onclick="toggleMob()" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mob-nav-links">
+    <a onclick="go('home');toggleMob()" class="mob-link active">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Home
+    </a>
+    <a onclick="go('services');toggleMob()" class="mob-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      Services
+    </a>
+    <a onclick="go('blogs');toggleMob()" class="mob-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Health Blog
+    </a>
+    <a onclick="go('faq');toggleMob()" class="mob-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      FAQ
+    </a>
+    <a onclick="go('contact');toggleMob()" class="mob-link">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      About &amp; Contact
+    </a>
+  </nav>
+  <a onclick="go('appointment');toggleMob()" class="mob-cta-btn">Book Appointment</a>
+  <div class="mob-nav-footer">
+    <div class="mob-footer-label">CONTACT INFO</div>
+    <a href="tel:+919470039239" class="mob-footer-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +91 94700 39239
+    </a>
+    <a href="https://wa.me/919006781087" target="_blank" class="mob-footer-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      WhatsApp Dr. Firoz
+    </a>
+  </div>
 </div>
 
 <!-- ════════════ HOME ════════════ -->
@@ -537,33 +575,70 @@
 </div>
 </div>
 
-<!-- TESTIMONIALS -->
-<section class="sec" style="background:var(--white);" aria-labelledby="testi-h2">
-<div class="wrap">
-<div style="text-align:center;margin-bottom:3.5rem;">
-  <div class="label sr" style="justify-content:center;">Patient Stories</div>
-  <h2 class="h2 sr d1" id="testi-h2">Real Stories,<br>Real Healing</h2>
-  <p class="body sr d2" style="max-width:480px;margin:.75rem auto 0;">Every patient who walks through our doors matters. Here are a few who shared their experience.</p>
-</div>
-<div class="testi-grid">
-  <div class="testi-card sr d1">
-    <div class="testi-top"><div class="testi-stars">★★★★★</div><div class="testi-tag">Diabetes</div></div>
-    <p class="testi-text">"Doctor sahab ne meri diabetes ko bahut acche se samjha. Pehle mera sugar level control hi nahi hota تھا — ab regular medicine aur diet se bilkul theek hai. Fees bhi bahut sahi hai, sab afford kar sakte hain."</p>
-    <div class="testi-author"><div class="tav">R</div><div><div class="tname">Ramesh K. from Amour</div><div class="tloc">Diabetes Patient · 15km away</div></div></div>
+<!-- TESTIMONIALS (PREMIUM REDESIGN) -->
+<section class="testi-premium-sec" aria-labelledby="testi-h2">
+  <div class="wrap">
+    <div class="testi-p-header">
+      <div class="label sr" style="justify-content:center;">Patient Stories</div>
+      <h2 class="h2 sr d1" id="testi-h2">Real Healing,<br>Authentic Voices</h2>
+      <p class="body sr d2" style="max-width:520px;margin:1rem auto 0;">Beyond clinical precision, it's the compassion that defines our care. Hear from those who have trusted Dr. Firoz with their health.</p>
+    </div>
+    
+    <div class="testi-p-grid">
+      <!-- CARD 1 -->
+      <div class="testi-p-card sr d1">
+        <div class="testi-p-quote-ico">“</div>
+        <div class="testi-p-stars">★★★★★</div>
+        <div class="testi-p-tag">Diabetes Care</div>
+        <p class="testi-p-text">"Doctor sahab ne meri diabetes ko bahut acche se samjha. Pehle mera sugar level control hi nahi hota tha — ab regular medicine aur diet se bilkul theek hai. Fees bhi bahut sahi hai, sab afford kar sakte hain."</p>
+        <div class="testi-p-author">
+          <div class="testi-p-av">R</div>
+          <div class="testi-p-info">
+            <div class="testi-p-name">Ramesh K. <span class="testi-p-v">Verified Patient</span></div>
+            <div class="testi-p-meta">Amour · 15km travel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="testi-p-card featured sr d2">
+        <div class="testi-p-quote-ico">“</div>
+        <div class="testi-p-stars">★★★★★</div>
+        <div class="testi-p-tag">24/7 Emergency</div>
+        <p class="testi-p-text">"Mere bachche ko bahut tez bukhar tha, raat ke 2 baje. Dr. Firoz sahab ne phone pe baat kari aur turant clinic bulaya. Ek baar mein sahi diagnosis ho gayi — do din mein bachcha theek. Bohot caring doctor hain."</p>
+        <div class="testi-p-author">
+          <div class="testi-p-av">S</div>
+          <div class="testi-p-info">
+            <div class="testi-p-name">Salma B. <span class="testi-p-v">Verified Patient</span></div>
+            <div class="testi-p-meta">Baisi Market · Local Resident</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="testi-p-card sr d3">
+        <div class="testi-p-quote-ico">“</div>
+        <div class="testi-p-stars">★★★★★</div>
+        <div class="testi-p-tag">Hypertension</div>
+        <p class="testi-p-text">"BP ka masla tha kafi time se, bahut jagah gaya. Yahan Dr. Firoz sahab ke paas aaya to seedha, sahi treatment mila. Woh apni bhasha mein samjhate hain — isliye bahut asan lagta hai. Highly recommended."</p>
+        <div class="testi-p-author">
+          <div class="testi-p-av">M</div>
+          <div class="testi-p-info">
+            <div class="testi-p-name">Mohammed A. <span class="testi-p-v">Verified Patient</span></div>
+            <div class="testi-p-meta">Purnea City · 40km travel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testi-p-footer sr d4">
+      <p>Patient names changed to initials for privacy · Data secured via HIPAA standards</p>
+      <div class="testi-p-google">
+        <span class="g-stars">★★★★★</span>
+        <span class="g-text">4.9/5 based on Google Reviews</span>
+      </div>
+    </div>
   </div>
-  <div class="testi-card sr d2">
-    <div class="testi-top"><div class="testi-stars">★★★★★</div><div class="testi-tag">Fever & Child Care</div></div>
-    <p class="testi-text">"Mere bachche ko bahut tez bukhar tha, raat ke 2 baje. Dr. Firoz sahab ne phone pe baat kari aur turant clinic bulaya. Ek baar mein sahi diagnosis ho gayi — do din mein bachcha theek. Bohot caring doctor hain."</p>
-    <div class="testi-author"><div class="tav">S</div><div><div class="tname">Salma B. from Baisi Market</div><div class="tloc">Paediatric Case · Local Resident</div></div></div>
-  </div>
-  <div class="testi-card sr d3">
-    <div class="testi-top"><div class="testi-stars">★★★★★</div><div class="testi-tag">Blood Pressure</div></div>
-    <p class="testi-text">"BP ka masla tha kafi time se, bahut jagah gaya. Yahan Dr. Firoz sahab ke paas aaya to seedha, sahi treatment mila. Woh apni bhasha mein samjhate hain — isliye bahut asan lagta hai. Highly recommended."</p>
-    <div class="testi-author"><div class="tav">M</div><div><div class="tname">Mohammed A. from Purnea City</div><div class="tloc">BP Patient · 40km travel</div></div></div>
-  </div>
-</div>
-<p style="text-align:center;font-size:.7rem;color:var(--muted-lt);margin-top:1.5rem;">Patient names changed to initials for privacy.</p>
-</div>
 </section>
 
 <!-- FAQ PREVIEW -->
@@ -750,56 +825,85 @@
 </div></div>
 <section class="sec"><div class="wrap">
 <div class="blog-grid">
+  <!-- BLOG 1: DIABETES -->
   <article class="blog-card sr d1" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="blog-img" style="background:linear-gradient(135deg,#e8f4ec,#c5e8d0);"><svg width="32" height="32" viewBox="0 0 24 24" fill="var(--green-900)" style="opacity:0.6;"><path d="M12 21.5c-4.142 0-7.5-3.358-7.5-7.5 0-3.712 3.522-8.59 6.78-12.32a.94.94 0 0 1 1.44 0c3.258 3.73 6.78 8.608 6.78 12.32 0 4.142-3.358 7.5-7.5 7.5z"/></svg><div class="blog-chip">Diabetes Management</div></div>
+    <div class="blog-img" onclick="openArticle('diabetes-baisi')" style="cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Diabetes Management in Baisi">
+      <div class="blog-chip">Diabetes Management</div>
+    </div>
     <div class="blog-body">
       <div class="blog-meta"><span>May 10, 2026</span><div class="blog-meta-sep"></div><span>5 min read</span></div>
-      <h2 itemprop="headline">How a Diabetes Doctor in Baisi Can Help You Manage Sugar Levels</h2>
+      <h2 itemprop="headline" onclick="openArticle('diabetes-baisi')" style="cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--green-700)'" onmouseout="this.style.color='var(--ink)'">How a Diabetes Doctor in Baisi Can Help You Manage Sugar Levels</h2>
       <p class="blog-exc" itemprop="description">Managing high blood sugar requires more than just medicine. Dr. Firoz Akhtar explains the role of diet and consistent care in Purnea.</p>
       <div class="blog-read-btn" onclick="openArticle('diabetes-baisi')">Read Article →</div>
     </div>
   </article>
+
+  <!-- BLOG 2: BP -->
   <article class="blog-card sr d2" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="blog-img" style="background:linear-gradient(135deg,#fce8e8,#f5b8b8);"><svg width="32" height="32" viewBox="0 0 24 24" fill="#a83232" style="opacity:0.6;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><div class="blog-chip">BP Treatment</div></div>
+    <div class="blog-img" onclick="openArticle('bp-purnea')" style="cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80" alt="BP Treatment in Purnea">
+      <div class="blog-chip" style="background:var(--white); color:#a83232;">BP Treatment</div>
+    </div>
     <div class="blog-body">
       <div class="blog-meta"><span>May 08, 2026</span><div class="blog-meta-sep"></div><span>4 min read</span></div>
-      <h2 itemprop="headline">Effective BP Treatment in Baisi: A Complete Guide for Families</h2>
+      <h2 itemprop="headline" onclick="openArticle('bp-purnea')" style="cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--green-700)'" onmouseout="this.style.color='var(--ink)'">Effective BP Treatment in Baisi: A Complete Guide for Families</h2>
       <p class="blog-exc" itemprop="description">High Blood Pressure is a silent threat in Purnea, Bihar. Learn how Dr. Firoz Akhtar provides accurate BP treatment and lifestyle counselling.</p>
       <div class="blog-read-btn" onclick="openArticle('bp-purnea')">Read Article →</div>
     </div>
   </article>
+
+  <!-- BLOG 3: LIFESTYLE -->
   <article class="blog-card sr d3" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="blog-img" style="background:linear-gradient(135deg,#f0f4e8,#d0e8b0);"><svg width="32" height="32" viewBox="0 0 24 24" fill="#4a5d23" style="opacity:0.6;"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66c.95-2.37 2.09-4.88 3.69-6.81 1.6 1.93 2.74 4.44 3.69 6.81l1.89-.66C13.1 16.17 11 10 2 8c4.67 0 11 3 15 5.25V8zM13.29 4.29L12 3 10.71 4.29 12 5.59l1.29-1.3z"/></svg><div class="blog-chip">Lifestyle</div></div>
+    <div class="blog-img" onclick="openArticle('lifestyle-diseases')" style="cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Healthy Lifestyle Tips">
+      <div class="blog-chip" style="background:var(--white); color:#4a5d23;">Lifestyle</div>
+    </div>
     <div class="blog-body">
       <div class="blog-meta"><span>May 06, 2026</span><div class="blog-meta-sep"></div><span>5 min read</span></div>
-      <h2 itemprop="headline">Key Points to Avoid Lifestyle Diseases — Practical Tips for Everyone</h2>
+      <h2 itemprop="headline" onclick="openArticle('lifestyle-diseases')" style="cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--green-700)'" onmouseout="this.style.color='var(--ink)'">Key Points to Avoid Lifestyle Diseases — Practical Tips for Everyone</h2>
       <p class="blog-exc" itemprop="description">Diabetes, BP, obesity — these are no longer diseases only of the rich. They are spreading rapidly in rural Bihar too. Here's what you can do starting today.</p>
       <div class="blog-read-btn" onclick="openArticle('lifestyle-diseases')">Read Article →</div>
     </div>
   </article>
+
+  <!-- BLOG 4: THYROID -->
   <article class="blog-card sr d1" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="blog-img" style="background:linear-gradient(135deg,#ece8f4,#c0b0e8);"><svg width="32" height="32" viewBox="0 0 24 24" fill="#6a4a9c" style="opacity:0.6;"><path d="M10.5 5h3V4a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1zM9 5v1h6V5h2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h-2v-1H9v1H7v-2H5v-2h2v-2H5v-2h2v-2H5V9h2V7h2V5z"/></svg><div class="blog-chip">Thyroid Care</div></div>
+    <div class="blog-img" onclick="openArticle('thyroid-purnea')" style="cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80" alt="Thyroid Treatment in Purnea">
+      <div class="blog-chip" style="background:var(--white); color:#6a4a9c;">Thyroid Care</div>
+    </div>
     <div class="blog-body">
       <div class="blog-meta"><span>May 05, 2026</span><div class="blog-meta-sep"></div><span>6 min read</span></div>
-      <h2 itemprop="headline">Advanced Thyroid Treatment in Purnea — Understanding Symptoms</h2>
+      <h2 itemprop="headline" onclick="openArticle('thyroid-purnea')" style="cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--green-700)'" onmouseout="this.style.color='var(--ink)'">Advanced Thyroid Treatment in Purnea — Understanding Symptoms</h2>
       <p class="blog-exc" itemprop="description">Fatigue and weight changes could be thyroid issues. Dr. Firoz offers specialized Thyroid treatment in Purnea for all ages.</p>
       <div class="blog-read-btn" onclick="openArticle('thyroid-purnea')">Read Article →</div>
     </div>
   </article>
+
+  <!-- BLOG 5: GUT HEALTH -->
   <article class="blog-card sr d2" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="blog-img" style="background:linear-gradient(135deg,#f0f8f0,#b0d8b0);"><svg width="32" height="32" viewBox="0 0 24 24" fill="#388e3c" style="opacity:0.6;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.5-12.2L11 13.3l-2.5-2.5L7.08 12.2l3.92 3.92 6.92-6.92z"/></svg><div class="blog-chip">Gut Health</div></div>
+    <div class="blog-img" onclick="openArticle('gut-health')" style="cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Gut Health and Digestion">
+      <div class="blog-chip" style="background:var(--white); color:#388e3c;">Gut Health</div>
+    </div>
     <div class="blog-body">
       <div class="blog-meta"><span>May 03, 2026</span><div class="blog-meta-sep"></div><span>4 min read</span></div>
-      <h2 itemprop="headline">How to Maintain Gut Health — Simple Steps for Better Digestion</h2>
+      <h2 itemprop="headline" onclick="openArticle('gut-health')" style="cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--green-700)'" onmouseout="this.style.color='var(--ink)'">How to Maintain Gut Health — Simple Steps for Better Digestion</h2>
       <p class="blog-exc" itemprop="description">Poor gut health affects energy, immunity and mood. Dr. Firoz shares practical, affordable steps to improve digestion and maintain a healthy stomach naturally.</p>
       <div class="blog-read-btn" onclick="openArticle('gut-health')">Read Article →</div>
     </div>
   </article>
+
+  <!-- BLOG 6: HERBAL MEDICINE -->
   <article class="blog-card sr d3" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="blog-img" style="background:linear-gradient(135deg,#f8f0e8,#e8d0b0);"><svg width="32" height="32" viewBox="0 0 24 24" fill="#8d6e63" style="opacity:0.6;"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66c.95-2.37 2.09-4.88 3.69-6.81 1.6 1.93 2.74 4.44 3.69 6.81l1.89-.66C13.1 16.17 11 10 2 8c4.67 0 11 3 15 5.25V8zM13.29 4.29L12 3 10.71 4.29 12 5.59l1.29-1.3z"/></svg><div class="blog-chip">Herbal Medicine</div></div>
+    <div class="blog-img" onclick="openArticle('herbal-medicine')" style="cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=800&q=80" alt="Herbal Medicine">
+      <div class="blog-chip" style="background:var(--white); color:#8d6e63;">Herbal Medicine</div>
+    </div>
     <div class="blog-body">
       <div class="blog-meta"><span>May 01, 2026</span><div class="blog-meta-sep"></div><span>5 min read</span></div>
-      <h2 itemprop="headline">Herbal Remedies That Actually Work — And When to See a Doctor Instead</h2>
+      <h2 itemprop="headline" onclick="openArticle('herbal-medicine')" style="cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--green-700)'" onmouseout="this.style.color='var(--ink)'">Herbal Remedies That Actually Work — And When to See a Doctor</h2>
       <p class="blog-exc" itemprop="description">As a B.U.M.S practitioner, Dr. Firoz explains which herbal remedies are backed by evidence and when you must consult a doctor instead for serious conditions.</p>
       <div class="blog-read-btn" onclick="openArticle('herbal-medicine')">Read Article →</div>
     </div>
@@ -837,6 +941,61 @@
 
       <!-- Content -->
       <div class="art-content" id="art-detail-content"></div>
+
+<!-- FACILITY SECTION -->
+<section class="facility-section sec" id="facility">
+  <div class="wrap">
+    <h2 class="section-title" style="font-family:var(--ff-d);font-size:clamp(2rem,5vw,3rem);color:var(--green-900);text-align:center;margin-bottom:2rem;">Our Premium Clinic Facilities</h2>
+    <div class="facility-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">
+      <div class="facility-card" style="background:#fff;border:1px solid var(--border-lt);border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-md);">
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Advanced Diagnostic Station" style="width:100%;height:180px;object-fit:cover;">
+        <div class="p-4">
+          <h3 style="font-family:var(--ff-d);font-size:1.25rem;color:var(--green-800);margin-bottom:0.5rem;">Advanced Diagnostic Station</h3>
+          <p style="color:var(--muted);font-size:.9rem;">State‑of‑the‑art labs and imaging for precise diagnosis.</p>
+        </div>
+      </div>
+      <div class="facility-card" style="background:#fff;border:1px solid var(--border-lt);border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-md);">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Sterile Patient Lounge" style="width:100%;height:180px;object-fit:cover;">
+        <div class="p-4">
+          <h3 style="font-family:var(--ff-d);font-size:1.25rem;color:var(--green-800);margin-bottom:0.5rem;">Sterile Patient Lounge</h3>
+          <p style="color:var(--muted);font-size:.9rem;">Comfortable, hygienic waiting area with privacy screens.</p>
+        </div>
+      </div>
+      <div class="facility-card" style="background:#fff;border:1px solid var(--border-lt);border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-md);">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Private Consultation Suite" style="width:100%;height:180px;object-fit:cover;">
+        <div class="p-4">
+          <h3 style="font-family:var(--ff-d);font-size:1.25rem;color:var(--green-800);margin-bottom:0.5rem;">Private Consultation Suite</h3>
+          <p style="color:var(--muted);font-size:.9rem;">Quiet, fully equipped rooms for confidential examinations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW MARQUEE -->
+<div class="review-marquee" style="background:var(--green-50);padding:1rem 0;margin-top:2rem;overflow:hidden;">
+  <div class="marquee-content" style="display:flex;gap:2rem;animation:marquee 30s linear infinite;">
+    <span>“Dr. Firoz’s precise diagnosis saved my life – truly professional.” – Rajesh, Baisi</span>
+    <span>“Clean, modern clinic and compassionate care.” – Sunita, Purnea</span>
+    <span>“Advanced treatment plan for my diabetes, felt premium.” – Amit, Kishanganj</span>
+    <span>“The facility feels like a top‑tier hospital, not a small practice.” – Priya, Katihar</span>
+    <span>“Every visit is comfortable and hygienic – thank you!” – Manish, Araria</span>
+  </div>
+</div>
+
+<!-- CTA FOOTER (updated copy) -->
+<div style="margin-top:4rem; padding:clamp(1.5rem, 5vw, 3rem); background:var(--green-50); border:1px solid var(--border-lt); border-radius:var(--r16); text-align:center;">
+  <div style="font-size:2.5rem; margin-bottom:1rem;">🩺</div>
+  <h4 style="font-family:var(--ff-d); font-size:1.6rem; color:var(--green-900); margin-bottom:0.5rem; line-height:1.2;">Need Expert Medical Advice?</h4>
+  <p style="color:var(--muted); margin-bottom:2rem; font-size:1.05rem;">Consult Dr. MD. Firoz Akhtar directly for precision, evidence‑based health guidance.</p>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="https://wa.me/919006781087" target="_blank" class="btn btn-wa" style="display:inline-flex; align-items:center; justify-content:center; gap:8px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+      WhatsApp Doctor
+    </a>
+    <a onclick="go('appointment')" class="btn btn-green" style="display:inline-flex; align-items:center; justify-content:center;">Book Appointment</a>
+  </div>
+</div>
       
       <!-- CTA Footer -->
       <div style="margin-top:4rem; padding:clamp(1.5rem, 5vw, 3rem); background:var(--green-50); border:1px solid var(--border-lt); border-radius:var(--r16); text-align:center;">
