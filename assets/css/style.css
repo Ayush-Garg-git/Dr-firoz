@@ -2102,6 +2102,10 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .about-sm{display:none;}
   .svc-cats{grid-template-columns:1fr;}
   .svc-cat:nth-child(2){margin-top:0;}
+
+  /* Home services split layout — stack on mobile */
+  .svc-split-layout{grid-template-columns:1fr;gap:2.5rem;}
+  .svc-left{position:static;top:auto;}
   .testi-grid{flex-direction:column;}
   .testi-card{flex: 1 1 100%; margin-top:0 !important;}
   .faq-prev-grid{grid-template-columns:1fr;}
@@ -2178,9 +2182,12 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   /* About section mobile */
   .about-badge{bottom:-1rem;right:auto;left:1rem;}
 
-  /* Services accordion mobile */
+  /* Services accordion mobile — ensure tappable */
   .svc-acc-title{font-size:1.05rem;}
   .svc-acc-grid{grid-template-columns:1fr;gap:1.5rem;}
+  .svc-acc-trigger{min-height:48px;padding:1.4rem 0;-webkit-tap-highlight-color:rgba(0,0,0,0.05);}
+  .svc-split-layout{gap:2rem;}
+  .svc-left{padding-bottom:0;}
 
   /* Quote section */
   .quote-sec{padding:80px 0;}
@@ -2481,4 +2488,124 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .q-text { font-size: 1.15rem; }
   .appt-card { padding: 1.25rem 1rem; }
   .nav-logo-img img { height: 90px !important; }
+}
+
+/* ═══════════════════════════════════
+   CLINICAL MOMENTS — MINIMAL STRIP
+═══════════════════════════════════ */
+.clinic-strip-sec {
+  padding: 80px 0 90px;
+  background: var(--cream);
+  border-top: 1px solid var(--border-lt);
+  border-bottom: 1px solid var(--border-lt);
+}
+
+.clinic-strip-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.clinic-strip-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.cs-num {
+  font-size: 0.9rem;
+  color: var(--muted-lt);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.cs-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cs-title {
+  font-family: var(--ff-d);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.clinic-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.cs-img-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--r12);
+  background: var(--green-50);
+}
+
+.cs-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  filter: saturate(0.9) contrast(1.03);
+  transition: transform 0.7s var(--ease), filter 0.6s var(--ease);
+  display: block;
+}
+
+.cs-card:hover .cs-img-wrap img {
+  transform: scale(1.04);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.cs-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.1rem;
+  border-top: 1px solid var(--border-lt);
+}
+
+.cs-index {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted-lt);
+  flex-shrink: 0;
+}
+
+.cs-caption {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+@media(max-width: 680px) {
+  .clinic-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .cs-img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+  .clinic-strip-top {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
