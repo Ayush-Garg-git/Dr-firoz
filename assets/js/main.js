@@ -40,26 +40,21 @@ function slideTesti(dir) {
   const shelf = document.getElementById('testi-shelf');
   if (!shelf) return;
   const cards = shelf.querySelectorAll('.testi-aura-card');
-  const cardWidth = 352; // 320px width + 32px gap
+  if (!cards.length) return;
   
-  // Smooth scroll
-  shelf.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+  const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginRight) || 0);
+  
+  // Calculate next scroll position
+  const currentScroll = shelf.scrollLeft;
+  const maxScroll = shelf.scrollWidth - shelf.clientWidth;
+  
+  let target = currentScroll + (dir * cardWidth);
+  
+  // Basic Loop logic
+  if (target > maxScroll + 10) target = 0;
+  if (target < -10) target = maxScroll;
 
-  // Seamless Loop Logic (After slide finishes)
-  setTimeout(() => {
-    const scrollLeft = shelf.scrollLeft;
-    const maxScroll = shelf.scrollWidth - shelf.clientWidth;
-    const offset = cardWidth * 4; // Length of 4 cards
-    
-    // If too far right, jump back to middle set
-    if (scrollLeft >= maxScroll - 50) {
-      shelf.scrollTo({ left: scrollLeft - offset, behavior: 'instant' });
-    }
-    // If too far left, jump forward to middle set
-    if (scrollLeft <= 50) {
-      shelf.scrollTo({ left: scrollLeft + offset, behavior: 'instant' });
-    }
-  }, 600);
+  shelf.scrollTo({ left: target, behavior: 'smooth' });
 
   startTestiAuto();
 }
