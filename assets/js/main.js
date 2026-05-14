@@ -34,10 +34,57 @@ function toggleMob(){
   }
 }
 
+/* ── TESTIMONIAL SLIDER ── */
+let testiTimer;
+function slideTesti(dir) {
+  const shelf = document.getElementById('testi-shelf');
+  if (!shelf) return;
+  const cards = shelf.querySelectorAll('.testi-aura-card');
+  const cardWidth = 352; // 320px width + 32px gap
+  
+  // Smooth scroll
+  shelf.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+
+  // Seamless Loop Logic (After slide finishes)
+  setTimeout(() => {
+    const scrollLeft = shelf.scrollLeft;
+    const maxScroll = shelf.scrollWidth - shelf.clientWidth;
+    const offset = cardWidth * 4; // Length of 4 cards
+    
+    // If too far right, jump back to middle set
+    if (scrollLeft >= maxScroll - 50) {
+      shelf.scrollTo({ left: scrollLeft - offset, behavior: 'instant' });
+    }
+    // If too far left, jump forward to middle set
+    if (scrollLeft <= 50) {
+      shelf.scrollTo({ left: scrollLeft + offset, behavior: 'instant' });
+    }
+  }, 600);
+
+  startTestiAuto();
+}
+
+function startTestiAuto() {
+  clearInterval(testiTimer);
+  testiTimer = setInterval(() => {
+    slideTesti(1);
+  }, 7000); // 7s pause
+}
+
 /* ── NAV SCROLL ── */
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10);
-},{passive:true});
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const shelf = document.getElementById('testi-shelf');
+  if (shelf) {
+    // Start at the middle set (Set 2)
+    shelf.scrollTo({ left: 352 * 4, behavior: 'instant' });
+  }
+  startTestiAuto();
+});
 
 /* ── FAQ ── */
 function showMoreFaq(btn) {
@@ -47,26 +94,15 @@ function showMoreFaq(btn) {
 
 function tFaqM(btn) {
   const item = btn.closest('.faq-m-item');
-  const content = item.querySelector('.faq-m-content');
-  const inner = item.querySelector('.faq-m-inner');
   const isActive = item.classList.contains('active');
   
   // Close all other items
   document.querySelectorAll('.faq-m-item').forEach(i => {
-    if (i !== item) {
-      i.classList.remove('active');
-      i.querySelector('.faq-m-content').style.height = '0px';
-    }
+    if (i !== item) i.classList.remove('active');
   });
 
   // Toggle current item
-  if (isActive) {
-    item.classList.remove('active');
-    content.style.height = '0px';
-  } else {
-    item.classList.add('active');
-    content.style.height = inner.scrollHeight + 'px';
-  }
+  item.classList.toggle('active');
 }
 
 function tFaq(btn){
