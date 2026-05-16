@@ -42,6 +42,8 @@
   --sh-gold:0 8px 32px rgba(91,105,98,.15);
   --ease: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   --spring: 1s cubic-bezier(0.16, 1, 0.3, 1);
+  --side-pad: 2rem;
+  --side-pad-mob: 1.5rem;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
@@ -105,7 +107,7 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
   border-color:rgba(221,227,232,0.8);
 }
 .nav-inner{
-  max-width:1200px;margin:0 auto;padding:0 2rem;height:100%;
+  max-width:1200px;margin:0 auto;padding:0 var(--side-pad);height:100%;
   display:flex;align-items:center;justify-content:space-between;gap:2rem;
 }
 .nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer;flex-shrink:0;}
@@ -239,11 +241,16 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
 /* ∩┐╜ ∩┐╜ ∩┐╜  LAYOUT ∩┐╜ ∩┐╜ ∩┐╜  */
 .pt{padding-top:140px;}
 #page-home .pt{padding-top:76px;}
-.wrap{max-width:1240px;margin:0 auto;padding:0 3rem;}
-.wrap-md{max-width:1000px;margin:0 auto;padding:0 3rem;}
-.wrap-sm{max-width:800px;margin:0 auto;padding:0 3rem;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--side-pad);position:relative;}
+.wrap-md{max-width:1000px;margin:0 auto;padding:0 var(--side-pad);position:relative;}
+.wrap-sm{max-width:800px;margin:0 auto;padding:0 var(--side-pad);position:relative;}
 .sec{padding:160px 0;}
 .sec-sm{padding:120px 0;}
+
+@media(max-width: 992px) {
+  .wrap, .wrap-md, .wrap-sm { padding: 0 var(--side-pad-mob); }
+  .nav-inner { padding: 0 var(--side-pad-mob); }
+}
 
 /* ΓòÉΓòÉΓòÉ TYPOGRAPHY ΓòÉΓòÉΓòÉ */
 .label{
@@ -2083,10 +2090,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .testi-card { flex: 1 1 calc(50% - 2rem); margin-top:0 !important; }
 }
 @media(max-width:900px){
-  .wrap { padding: 0 1.5rem; }
-  .wrap-md { padding: 0 1.5rem; }
-  .wrap-sm { padding: 0 1.5rem; }
-  .nav-inner { padding: 0 1.5rem; }
+  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 var(--side-pad-mob); }
   .nav { width:100%; top:0; left:0; transform:none; border-radius:0; border-left:none; border-right:none; border-top:none; height:70px; }
   .nav.scrolled { top:0; }
   .ham{display:flex;} .nav-links{display:none;}
@@ -2158,10 +2162,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .testi-aura-text { font-size: 0.95rem; }
 }
 @media(max-width:600px){
-  .wrap { padding: 0 1.25rem; }
-  .wrap-md { padding: 0 1.25rem; }
-  .wrap-sm { padding: 0 1.25rem; }
-  .nav-inner { padding: 0 1.25rem; }
+  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 1.25rem; }
   .h1 { font-size: 2.2rem; }
   .h2 { font-size: 1.8rem; }
   .sec{padding:80px 0;}
@@ -2478,8 +2479,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .label { font-size: 0.6rem; letter-spacing: 0.14em; margin-bottom: 0.6rem; }
 
   /* ΓöÇΓöÇ PREMIUM BREATHING ROOM FINE-TUNE ΓöÇΓöÇ */
-  .wrap, .wrap-md, .wrap-sm { padding: 0 1.5rem; }
-  .nav-inner { padding: 0 1.5rem; }
+  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 var(--side-pad-mob); }
   .rule { margin: 1rem 0; }
 }
 
