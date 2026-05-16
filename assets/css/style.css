@@ -47,13 +47,15 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;width:100%;}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;}
 
 /* Premium Global Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--cream); }
-::-webkit-scrollbar-thumb { background: var(--green-200); border-radius: 10px; border: 2px solid var(--cream); }
-::-webkit-scrollbar-thumb:hover { background: var(--green-400); }
+@media(min-width: 901px) {
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--green-200); border-radius: 10px; border: 2px solid var(--cream); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--green-400); }
+}
 
 /* Premium Text Selection */
 ::selection { background: var(--green-800); color: var(--white); }
@@ -2766,7 +2768,15 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .testi-aura-card { transform: none !important; }
 }
 
-/* EMERGENCY SECTION CONTRAST FIX */
+/* ── FINAL MOBILE SPACING OVERRIDE (CRITICAL) ── */
+@media (max-width: 992px) {
+  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 1.5rem !important; }
+}
+@media (max-width: 600px) {
+  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 1.25rem !important; }
+}
+
+/* ── EMERGENCY SECTION CONTRAST FIX ── */
 .emrg-text h2 { color: #fff !important; }
 .emrg-text p { color: rgba(255,255,255,0.7) !important; }
 
