@@ -47,7 +47,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;width:100%;position:relative;}
 
 /* Premium Global Scrollbar */
 @media(min-width: 901px) {
@@ -170,13 +170,14 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
 .mob-nav{
   position:fixed;top:0;right:-320px;bottom:0;z-index:1002;
   width:300px;
+  visibility:hidden;pointer-events:none;
   background:var(--white);
   display:flex;flex-direction:column;
   box-shadow:-10px 0 40px rgba(0,0,0,0.08);
-  transition:right 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y:auto;
 }
-.mob-nav.open{right:0;}
+.mob-nav.open{right:0;visibility:visible;pointer-events:all;}
 
 .mob-nav-header{
   display:flex;align-items:center;justify-content:space-between;
@@ -661,7 +662,7 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
 }
 
 /* ΓòÉΓòÉΓòÉ MARQUEE ΓòÉΓòÉΓòÉ */
-.mq-wrap{background:var(--green-800);overflow:hidden;padding:.82rem 0;}
+.mq-wrap{background:var(--green-800);overflow:hidden!important;padding:.82rem 0;position:relative;width:100%;}
 .mq-track{display:flex;gap:2.5rem;flex-shrink:0;animation:mq 30s linear infinite;white-space:nowrap;}
 .mq-wrap:hover .mq-track{animation-play-state:paused;}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -2007,7 +2008,7 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
   background:linear-gradient(135deg,var(--green-800) 0%,var(--green-900) 100%);
   padding:88px 0;position:relative;overflow:hidden;
 }
-.cta-sec::before{content:'≡ƒî┐';position:absolute;left:-2rem;bottom:-2rem;font-size:12rem;opacity:.04;transform:rotate(20deg);pointer-events:none;}
+.cta-sec::before{content:'🌿';position:absolute;left:-1rem;bottom:-1rem;font-size:10rem;opacity:.04;transform:rotate(20deg);pointer-events:none;}
 .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;position:relative;z-index:2;}
 .cta-text h2{font-family:var(--ff-d);font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--white);margin-bottom:.45rem;}
 .cta-text p{color:rgba(255,255,255,.6);font-size:.92rem;}
