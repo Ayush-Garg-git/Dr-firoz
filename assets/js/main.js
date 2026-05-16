@@ -67,10 +67,12 @@ function startTestiAuto() {
 }
 
 /* ── NAV SCROLL ── */
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('nav');
-  if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
+const nav = document.getElementById('nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const shelf = document.getElementById('testi-shelf');
@@ -79,6 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
     shelf.scrollTo({ left: 352 * 4, behavior: 'instant' });
   }
   startTestiAuto();
+
+  // Route by hash on direct visit (SEO)
+  setTimeout(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash.startsWith('article-')) {
+      const artId = hash.replace('article-', '');
+      if (ARTICLES[artId]) openArticle(artId);
+    } else if (hash.startsWith('page-')) {
+      const pageId = hash.replace('page-', '');
+      if (PAGES.includes(pageId)) go(pageId);
+    }
+  }, 100);
+
+  // Initialize cached elements for FAQ Liquid Scroll loop
+  faqSec = document.getElementById('page-faq');
+  faqList = document.querySelector('.faq-m-list');
+  faqContainer = document.querySelector('.faq-m-right');
+  requestAnimationFrame(updateFAQScroll);
 });
 
 /* ── FAQ ── */
@@ -125,11 +145,12 @@ function initSR(){
   document.querySelectorAll('.sr:not(.on),.sr-l:not(.on),.sr-r:not(.on),.sr-s:not(.on)').forEach(el=>io.observe(el));
 
   // Explorer Transitions
+  const svcImgs = document.querySelectorAll('.svc-visual-img');
   const exIo = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting){
         const id = e.target.getAttribute('data-img');
-        document.querySelectorAll('.svc-visual-img').forEach(img => img.classList.remove('active'));
+        svcImgs.forEach(img => img.classList.remove('active'));
         const active = document.getElementById('vi-'+id);
         if(active) active.classList.add('active');
       }
@@ -147,11 +168,9 @@ let targetY = 0;
 let currentY = 0;
 const lerp = (start, end, amt) => (1 - amt) * start + amt * end;
 
-function updateFAQScroll() {
-  const faqSec = document.getElementById('page-faq');
-  const faqList = document.querySelector('.faq-m-list');
-  const faqContainer = document.querySelector('.faq-m-right');
+let faqSec, faqList, faqContainer;
 
+function updateFAQScroll() {
   if (faqSec && faqList && faqContainer && faqSec.classList.contains('active') && window.innerWidth > 992) {
     const rect = faqSec.getBoundingClientRect();
     
@@ -165,17 +184,18 @@ function updateFAQScroll() {
       targetY = progress * travel * -1;
     }
     
-    // Smooth transition
-    currentY = lerp(currentY, targetY, 0.08); // 0.08 for "Liquid" feel
-    faqList.style.transform = `translate3d(0, ${currentY}px, 0)`;
+    // Smooth transition - only update DOM if change is significant
+    if (Math.abs(currentY - targetY) > 0.1) {
+      currentY = lerp(currentY, targetY, 0.08); // 0.08 for "Liquid" feel
+      faqList.style.transform = `translate3d(0, ${currentY}px, 0)`;
+    }
   } else if (faqList && window.innerWidth <= 992) {
-    faqList.style.transform = 'none';
+    if (faqList.style.transform !== 'none') {
+      faqList.style.transform = 'none';
+    }
   }
   requestAnimationFrame(updateFAQScroll);
 }
-
-// Start the smooth loop
-requestAnimationFrame(updateFAQScroll);
 
 /* ── PREMIUM BLOG SYSTEM ── */
 const ARTICLES = {
