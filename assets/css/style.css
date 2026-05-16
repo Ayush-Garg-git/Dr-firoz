@@ -44,8 +44,8 @@
   --spring: 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;}
-body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;width:100%;}
 
 /* Premium Global Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
@@ -164,8 +164,8 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
 
 /* ΓöÇΓöÇ PREMIUM MOBILE SIDEBAR ΓöÇΓöÇ */
 .mob-nav{
-  position:fixed;top:0;right:-100%;bottom:0;z-index:1002;
-  width:min(85vw, 380px);
+  position:fixed;top:0;right:-320px;bottom:0;z-index:1002;
+  width:300px;
   background:var(--white);
   display:flex;flex-direction:column;
   box-shadow:-10px 0 40px rgba(0,0,0,0.08);
@@ -2119,6 +2119,10 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .mob-call-sticky{display:flex;}
   body{padding-bottom:64px;}
 
+  /* Shorter Buttons on Mobile */
+  .btn { padding: 0.75rem 1.6rem; font-size: 0.82rem; }
+  .btn-lg { padding: 0.85rem 1.8rem; font-size: 0.88rem; }
+
   /* Hide WA FAB on mobile ΓÇö sticky bar handles this */
   .wa-fab{display:none !important;}
 
@@ -2149,6 +2153,8 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
 
   /* Testimonials */
   .testi-card{padding:1.75rem 1.5rem;}
+  .testi-aura-card { padding: 2rem 1.5rem 1.75rem; }
+  .testi-aura-text { font-size: 0.95rem; }
 }
 @media(max-width:600px){
   .wrap { padding: 0 1rem; }
@@ -2200,9 +2206,10 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .emrg-btns .btn{width:100%;justify-content:center;}
 
   /* CTA section */
-  .cta-text h2{font-size:1.6rem;}
-  .cta-acts{width:100%;}
-  .cta-acts .btn{width:100%;justify-content:center;}
+  .cta-text h2{font-size:1.45rem;}
+  .cta-text p { font-size: 0.82rem; line-height: 1.5; }
+  .cta-acts{width:100%; gap: 0.65rem; }
+  .cta-acts .btn{width:100%;justify-content:center; padding: 0.75rem 1.25rem; }
 
   /* Sticky CTA bar refined */
   .mob-call-sticky{padding:0.5rem 0.65rem;}
@@ -2475,12 +2482,12 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
 
 /* ΓöÇΓöÇ EXTRA SMALL (Γëñ 400px) ΓöÇΓöÇ */
 @media(max-width: 400px) {
-  .hero-name { font-size: 1.7rem; }
-  .hero-img-wrap { max-width: 230px; }
-  .tl-count { font-size: 4rem; }
-  .q-text { font-size: 1.15rem; }
+  .hero-name { font-size: 1.6rem; }
+  .hero-img-wrap { max-width: 220px; }
+  .tl-count { font-size: 3.5rem; }
+  .q-text { font-size: 1.1rem; }
   .appt-card { padding: 1.25rem 1rem; }
-  .nav-logo-img img { height: 90px !important; }
+  .nav-logo-img img { height: 75px !important; }
 }
 
 /* ── CLINIC STRIP: DOCTOR AT WORK ── */
