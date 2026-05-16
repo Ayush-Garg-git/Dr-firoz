@@ -2769,12 +2769,16 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .testi-aura-card { transform: none !important; }
 }
 
-/* ── FINAL MOBILE SPACING OVERRIDE (CRITICAL) ── */
+/* ── FINAL MOBILE ALIGNMENT & SPACING (CRITICAL) ── */
 @media (max-width: 992px) {
-  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 1.5rem !important; }
+  .wrap, .wrap-md, .wrap-sm, .nav-inner, .testi-aura-wrap { 
+    padding: 0 1.5rem !important; 
+  }
 }
 @media (max-width: 600px) {
-  .wrap, .wrap-md, .wrap-sm, .nav-inner { padding: 0 1.25rem !important; }
+  .wrap, .wrap-md, .wrap-sm, .nav-inner, .testi-aura-wrap { 
+    padding: 0 1.25rem !important; 
+  }
 }
 
 /* ── EMERGENCY SECTION CONTRAST FIX ── */
