@@ -2086,6 +2086,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .wrap { padding: 0 1.5rem; }
   .wrap-md { padding: 0 1.5rem; }
   .wrap-sm { padding: 0 1.5rem; }
+  .nav-inner { padding: 0 1.5rem; }
   .nav { width:100%; top:0; left:0; transform:none; border-radius:0; border-left:none; border-right:none; border-top:none; height:70px; }
   .nav.scrolled { top:0; }
   .ham{display:flex;} .nav-links{display:none;}
@@ -2157,9 +2158,10 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .testi-aura-text { font-size: 0.95rem; }
 }
 @media(max-width:600px){
-  .wrap { padding: 0 1rem; }
-  .wrap-md { padding: 0 1rem; }
-  .wrap-sm { padding: 0 1rem; }
+  .wrap { padding: 0 1.25rem; }
+  .wrap-md { padding: 0 1.25rem; }
+  .wrap-sm { padding: 0 1.25rem; }
+  .nav-inner { padding: 0 1.25rem; }
   .h1 { font-size: 2.2rem; }
   .h2 { font-size: 1.8rem; }
   .sec{padding:80px 0;}
@@ -2171,7 +2173,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .social-grid{grid-template-columns:1fr;}
 
   /* Credential chips stack nicely */
-  .cred-strip-inner{gap:1rem;padding:0 1rem;}
+  .cred-strip-inner{gap:1rem;padding:0 1.25rem;}
   .cred-chip{font-size:0.82rem;gap:0.75rem;}
 
   /* Hero buttons responsive */
@@ -2305,7 +2307,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 1.5rem;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 1.5rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
     justify-content: flex-start;
@@ -2414,11 +2416,11 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
 
   /* ΓöÇΓöÇ APPOINTMENT PAGE ΓöÇΓöÇ */
   .appt-layout { grid-template-columns: 1fr; min-height: auto; }
-  .appt-left { padding: 3rem 1.25rem; }
+  .appt-left { padding: 3rem 1.5rem; }
   .appt-left h1 { font-size: 1.75rem; }
   .appt-left p { font-size: 0.85rem; margin-bottom: 2rem; }
-  .appt-right { padding: 2rem 1.25rem 4rem; }
-  .appt-card { padding: 1.75rem 1.25rem; border-radius: 20px; }
+  .appt-right { padding: 2rem 1.5rem 4rem; }
+  .appt-card { padding: 1.75rem 1.5rem; border-radius: 20px; }
   .appt-card h2 { font-size: 1.4rem; }
   .appt-dets { gap: 0.65rem; }
   .appt-det-val { font-size: 0.82rem; }
@@ -2432,7 +2434,7 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .svc-explorer { flex-direction: column; }
   .svc-visuals { flex: none; width: 100%; height: 40vw; min-height: 200px; max-height: 300px; position: relative; }
   .svc-visual-img { padding: 0.75rem; }
-  .svc-content-scroll { flex: none; width: 100%; padding: 2.5rem 1.25rem 4rem; }
+  .svc-content-scroll { flex: none; width: 100%; padding: 2.5rem 1.5rem 4rem; }
   .svc-block { margin-bottom: 4rem; }
   .svc-num { font-size: 4rem; }
   .svc-header .h2 { font-size: 1.65rem; }
@@ -2476,7 +2478,8 @@ footer{background:var(--green-900);color:rgba(255,255,255,.5);padding:4rem 0 2re
   .label { font-size: 0.6rem; letter-spacing: 0.14em; margin-bottom: 0.6rem; }
 
   /* ΓöÇΓöÇ PREMIUM BREATHING ROOM FINE-TUNE ΓöÇΓöÇ */
-  .wrap, .wrap-md, .wrap-sm { padding: 0 1.25rem; }
+  .wrap, .wrap-md, .wrap-sm { padding: 0 1.5rem; }
+  .nav-inner { padding: 0 1.5rem; }
   .rule { margin: 1rem 0; }
 }
 
