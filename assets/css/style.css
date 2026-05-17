@@ -46,8 +46,8 @@
   --side-pad-mob: 1.5rem;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;width:100%;position:relative;}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:clip;width:100%;position:relative;}
 
 /* Premium Global Scrollbar */
 @media(min-width: 901px) {
@@ -77,7 +77,7 @@ button{cursor:pointer;font-family:var(--ff-b);border:none;background:none;}
 /* ΓòÉΓòÉΓòÉ PAGE SYSTEM ΓòÉΓòÉΓòÉ */
 .page{display:none;}
 .page.active{display:block;animation:pgIn .45s var(--ease) both;}
-@keyframes pgIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pgIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
 /* ΓòÉΓòÉΓòÉ SCROLL REVEAL ΓòÉΓòÉΓòÉ */
 .sr{opacity:0;transform:translateY(16px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease);}
