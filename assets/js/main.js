@@ -199,6 +199,49 @@ function updateFAQScroll() {
 
 /* ── PREMIUM BLOG SYSTEM ── */
 const ARTICLES = {
+  'general-physician-baisi-purnia': {
+    title: "Complete Family Healthcare in Seemanchal: Your Trusted General Physician in Baisi, Purnea",
+    cat: "Primary Care",
+    date: "May 17, 2026",
+    read: "6 min read",
+    img: "assets/images/firoz.jpeg",
+    content: `
+      <p>When it comes to your family's health, having a doctor who listens, understands your lifestyle, and provides accurate medical advice is irreplaceable. In our fast-growing region of Seemanchal—spanning Baisi, Purnea, Katihar, and Kishanganj—families often struggle to find consistent, accessible, and high-quality primary care. Many patients travel long distances to major cities for basic treatments, or rely on self-medication, which can often do more harm than good.</p>
+      
+      <p>At <strong>Seemanchal Clinic</strong>, led by <strong>Dr. Md Firoz Akhtar</strong>, we believe that premium healthcare should be close to home. Combining clinical diagnostic precision with a compassionate, root-cause healing approach, we are committed to keeping our community healthy, active, and thriving.</p>
+
+      <h2>Looking for a Compassionate General Physician in Bihar? Meet Dr. Md Firoz Akhtar</h2>
+      <p>Finding a dependable <strong>general physician in Bihar</strong> who treats you like family is the first step toward long-term wellness. Dr. Md Firoz Akhtar (B.U.M.S) brings years of clinical experience, having successfully treated over 20,000 patients in the region.</p>
+      <p>His unique, integrated medical philosophy blends the deep, restorative wisdom of traditional healing with the fast, modern diagnostic accuracy required for acute illnesses. Whether you are dealing with a sudden seasonal flu or seeking a long-term plan for chronic conditions, Dr. Firoz provides clear, honest, and affordable clinical solutions tailored specifically to the regional lifestyle of Bihar.</p>
+
+      <h2>Expert Diabetes Doctor in Baisi: Managing Your Blood Sugar with Precision</h2>
+      <p>Diabetes has rapidly shifted from being a 'city lifestyle issue' to a widespread health concern affecting families right here in Baisi and surrounding rural areas. Due to high-carbohydrate dietary staples (such as heavy white rice portions) and a historical lack of regular health checkups, many patients are diagnosed only after complications arise.</p>
+      <p>As a dedicated <strong>diabetes doctor in Baisi</strong>, Dr. Md Firoz Akhtar focuses on early detection, continuous sugar monitoring, and lifestyle adjustment. High blood sugar doesn't just make you feel fatigued; over time, it acts like a silent threat to your kidneys, eyes, heart, and nervous system.</p>
+
+      <h3>Actionable Tips for Blood Sugar Management:</h3>
+      <ul>
+        <li><strong>Rethink the Plate:</strong> Reduce white rice (Bhat) portion sizes and replace half of your plate with whole-grain roti, millets, or green vegetables.</li>
+        <li><strong>Move Daily:</strong> A simple 20-minute brisk walk after meals helps muscles absorb glucose naturally.</li>
+        <li><strong>Regular Monitoring:</strong> Fasting and post-meal sugar levels should be checked routinely.</li>
+      </ul>
+
+      <h2>BP Treatment in Purnia: Guarding Your Cardiovascular Health</h2>
+      <p>High blood pressure (hypertension) is often called the 'silent killer' because it rarely causes obvious, painful symptoms, yet remains the leading cause of sudden strokes and heart failure. At Seemanchal Clinic, we provide comprehensive <strong>BP treatment in Purnia</strong> and Baisi, helping families take control of their cardiovascular health.</p>
+      <p>We look at the whole picture—stress factors, sodium intake, sleep patterns, and physical habits. We use calibrated digital and manual monitors, specialized salt-reduction plans for the Bihar diet, and modern safe medications.</p>
+
+      <h2>Quick and Reliable Fever Treatment Near Me</h2>
+      <p>Living in the riverine Seemanchal region means that seasonal changes bring a rise in vector-borne and water-borne illnesses. If you are searching for urgent, reliable <strong>fever treatment near me</strong>, Seemanchal Clinic is fully equipped to handle acute febrile illnesses including Typhoid, Dengue, Malaria, and respiratory viral infections.</p>
+      <p>Avoid buying over-the-counter heavy antibiotics or painkillers without clinical guidance, as they can cause severe stomach damage and mask serious conditions. Seek expert consultation immediately if a fever exceeds 102°F or lasts more than 48 hours.</p>
+
+      <h3>Frequently Asked Questions</h3>
+      <div class="art-faq">
+        <strong>When should I visit a general physician instead of self-medicating?</strong>
+        <p>You should visit a qualified doctor for any fever lasting more than 48 hours, sudden chest discomfort, chronic fatigue, unexplained weight loss, or persistent digestive problems.</p>
+        <strong>Can type 2 diabetes be reversed or managed without heavy lifelong medicine?</strong>
+        <p>Yes, if diagnosed early. By committing to strict carbohydrate restriction, regular physical activity, and losing weight, many patients can reverse their pre-diabetes or manage type 2 diabetes with minimal support.</p>
+      </div>
+    `,
+  },
   'diabetes-baisi': {
     title: "How a Diabetes Doctor in Baisi Can Help You Manage Sugar Levels",
     cat: "Endocrine Health",
