@@ -35,35 +35,30 @@ function toggleMob(){
 }
 
 /* ── TESTIMONIAL SLIDER ── */
-let testiTimer;
 function slideTesti(dir) {
   const shelf = document.getElementById('testi-shelf');
   if (!shelf) return;
   const cards = shelf.querySelectorAll('.testi-aura-card');
   if (!cards.length) return;
   
-  const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginRight) || 0);
+  // Calculate card width plus the gap in the flex track
+  const track = shelf.querySelector('.testi-aura-track');
+  const gap = track ? (parseFloat(getComputedStyle(track).gap) || 32) : 32;
+  const cardWidth = cards[0].offsetWidth + gap;
   
-  // Calculate next scroll position
   const currentScroll = shelf.scrollLeft;
   const maxScroll = shelf.scrollWidth - shelf.clientWidth;
   
   let target = currentScroll + (dir * cardWidth);
   
   // Basic Loop logic
-  if (target > maxScroll + 10) target = 0;
-  if (target < -10) target = maxScroll;
+  if (target > maxScroll + 15) {
+    target = 0;
+  } else if (target < -15) {
+    target = maxScroll;
+  }
 
   shelf.scrollTo({ left: target, behavior: 'smooth' });
-
-  startTestiAuto();
-}
-
-function startTestiAuto() {
-  clearInterval(testiTimer);
-  testiTimer = setInterval(() => {
-    slideTesti(1);
-  }, 7000); // 7s pause
 }
 
 /* ── NAV SCROLL ── */
@@ -77,10 +72,12 @@ if (nav) {
 document.addEventListener('DOMContentLoaded', () => {
   const shelf = document.getElementById('testi-shelf');
   if (shelf) {
-    // Start at the middle set (Set 2)
-    shelf.scrollTo({ left: 352 * 4, behavior: 'instant' });
+    // Start at the first set (initial position)
+    shelf.scrollTo({ left: 0, behavior: 'instant' });
   }
-  startTestiAuto();
+
+  // Initialize Likes System
+  initLikes();
 
   // Route by hash on direct visit (SEO)
   setTimeout(() => {
@@ -408,4 +405,57 @@ function openArticle(id) {
 
   go('article');
   window.scrollTo(0, 0);
+}
+
+/* ── CARD LIKES SYSTEM ── */
+function initLikes() {
+  const items = document.querySelectorAll('[data-like-id]');
+  items.forEach(item => {
+    const id = item.getAttribute('data-like-id');
+    const countSpan = item.querySelector('.like-count');
+    if (!countSpan) return;
+    
+    // Check if user already liked this item
+    const hasLiked = localStorage.getItem('liked_' + id) === 'true';
+    if (hasLiked) {
+      item.classList.add('liked');
+    }
+    
+    // Get count from localStorage or set a random one between 150 and 200
+    let count = localStorage.getItem('count_' + id);
+    if (!count) {
+      count = Math.floor(Math.random() * (200 - 150 + 1)) + 150;
+      localStorage.setItem('count_' + id, count);
+    }
+    
+    countSpan.textContent = count;
+  });
+}
+
+function toggleLike(btn, id) {
+  if (window.event) window.event.stopPropagation();
+  const countSpan = btn.querySelector('.like-count');
+  if (!countSpan) return;
+  
+  let count = parseInt(countSpan.textContent, 10) || 150;
+  const isLiked = btn.classList.contains('liked');
+  
+  if (isLiked) {
+    btn.classList.remove('liked');
+    count--;
+    localStorage.setItem('liked_' + id, 'false');
+  } else {
+    btn.classList.add('liked');
+    count++;
+    localStorage.setItem('liked_' + id, 'true');
+    
+    // Trigger pop/heart burst micro-animation
+    btn.style.transform = 'scale(1.3)';
+    setTimeout(() => {
+      btn.style.transform = '';
+    }, 200);
+  }
+  
+  countSpan.textContent = count;
+  localStorage.setItem('count_' + id, count);
 }
